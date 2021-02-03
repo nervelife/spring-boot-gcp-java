@@ -18,6 +18,8 @@ public interface BooksRepository extends DatastoreRepository<Book, Key> {
     
     List<Book> findByAuthor(Author author);
 
+    List<Book> findByCategory(String category);
+
     @Query("SELECT * FROM Books WHERE __key__ HAS ANCESTOR @publisherKey")
     List<Book> findByPublisher(@Param("publisherKey") Key publisherKey);
     
