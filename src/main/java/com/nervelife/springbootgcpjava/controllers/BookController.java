@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import com.google.cloud.spring.data.datastore.core.DatastoreTemplate;
+import org.springframework.cloud.gcp.data.datastore.core.DatastoreTemplate;
 import com.google.cloud.datastore.Key;
 
 import com.nervelife.springbootgcpjava.domain.entities.Author;

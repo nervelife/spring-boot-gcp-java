@@ -7,8 +7,8 @@ import com.google.cloud.datastore.Key;
 import com.nervelife.springbootgcpjava.domain.entities.Author;
 import com.nervelife.springbootgcpjava.domain.entities.Book;
 
-import com.google.cloud.spring.data.datastore.repository.DatastoreRepository;
-import com.google.cloud.spring.data.datastore.repository.query.Query;
+import org.springframework.cloud.gcp.data.datastore.repository.DatastoreRepository;
+import org.springframework.cloud.gcp.data.datastore.repository.query.Query;
 
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;

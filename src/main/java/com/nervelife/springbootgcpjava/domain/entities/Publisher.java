@@ -3,8 +3,8 @@ package com.nervelife.springbootgcpjava.domain.entities;
 import java.util.Date;
 import java.util.List;
 
-import com.google.cloud.spring.data.datastore.core.mapping.Descendants;
-import com.google.cloud.spring.data.datastore.core.mapping.Entity;
+import org.springframework.cloud.gcp.data.datastore.core.mapping.Descendants;
+import org.springframework.cloud.gcp.data.datastore.core.mapping.Entity;
 import org.springframework.data.annotation.Id;
 
 @Entity(name = "Publishers")

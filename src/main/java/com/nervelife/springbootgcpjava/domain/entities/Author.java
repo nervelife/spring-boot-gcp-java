@@ -1,7 +1,7 @@
 // Author.java
 package com.nervelife.springbootgcpjava.domain.entities;
 
-import com.google.cloud.spring.data.datastore.core.mapping.Entity;
+import org.springframework.cloud.gcp.data.datastore.core.mapping.Entity;
 
 import org.springframework.data.annotation.Id;
 
