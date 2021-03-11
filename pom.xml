@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.nervelife</groupId>
 	<artifactId>spring-boot-gcp-java</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2-NATIVE</version>
 	<name>spring-boot-gcp-java</name>
 	<description>This demo project walks you through the process of creating high scalable Web/REST Services using spring boot and Google Cloud APIs.</description>
 	<properties>
@@ -36,6 +36,7 @@
 			--enable-https 
 			--enable-http 
 			--enable-all-security-services
+			--trace-class-initialization=org.springframework.util.unit.DataSize
 		</native.build.args>
 	</properties>
 	<dependencies>
@@ -58,7 +59,6 @@
 			<optional>true</optional>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -77,6 +77,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.tomcat.experimental</groupId>
 			<artifactId>tomcat-embed-programmatic</artifactId>
@@ -172,7 +173,9 @@
 						<artifactId>spring-boot-maven-plugin</artifactId>
 						<configuration>
 							<image>
-								<builder>paketobuildpacks/builder:tiny</builder>
+								<builder>paketobuildpacks/builder:base</builder>
+
+								<verboseLogging>true</verboseLogging>
 								<env>
 									<BP_BOOT_NATIVE_IMAGE>1</BP_BOOT_NATIVE_IMAGE>
 									<BP_BOOT_NATIVE_IMAGE_BUILD_ARGUMENTS>
